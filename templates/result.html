@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Prediction of soil nutrients Nitrogen,Phosphorus,Potassium in ppm</title>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+		<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+	</head>
+
+    <body>
+
+   <div class="container">
+    <h2 class='container-heading'><span class="heading_font">Prediction of Soil nutrients</span></h2><br>
+    <div class='description'>
+      <p>A Machine Learning Web Application that predicts soil nutrients quantity of nitrogen,Phosphorus,Potassium in ppm Built with Flask.</p><br>
+    </div>
+  </div>
+		<div class="results">
+        <h1>Prediction Results:</h1>
+        {% set labels1 = ["Decision Tree", "K Nearest Neighbor", "Neural Networks MLP","Random Forest","Xg boost"]%}
+        <h2><p>Model Selected: {{ labels1[selection] }}</p></h2>
+        <h2>{{labels1[selection]}} Predictions:</h2>
+        <ul>
+            {% set labels = ["Nitrogen (ppm)", "Phosphorus (ppm)", "Potassium (ppm)"] %}
+            <li><h3>{{ labels[0] }}: {{ prediction[0][0] }}</h3></li>
+            <li><h3>{{ labels[1] }}: {{ prediction[0][1] }}</h3></li>
+            <li><h3>{{ labels[2] }}: {{ prediction[0][2] }}</h3></li>
+        </ul>
+		</div>
+		<br>
+		<hr style="width: 50%; background-color: black; height : 4px; margin-bottom : 30px">
+
+		<div class = "results2">
+			<h3 style = "padding : 0px; margin : 5px; color:black;">Task Implemented by Verma Ayush Btech from NITK Branch Information Technology</h3>
+		</div>
+       <div class='footer2'>
+           <p class='footer-description'>Made by Verma Ayush - 211IT079</p>
+       </div>
+
+	</body>
+</html>

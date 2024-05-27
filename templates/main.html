@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prediction of soil nutrients Nitrogen,Phosphorus,Potassium in ppm</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body >
+
+  <!-- Website Title -->
+
+  <div class="container">
+    <h2 class='container-heading'><span class="heading_font">Prediction of Soil nutrients</span></h2><br>
+    <div class='description'>
+      <p>A Machine Learning Web Application that predicts soil nutrients quantity of nitrogen,Phosphorus,Potassium in ppm Built with Flask</p><br>
+    </div>
+  </div>
+
+  <!-- Text Area -->
+  <div class="ml-container">
+    <form action="{{ url_for('predict')}}" method="POST">
+
+        <label for="soiltype">Soil Type</label>
+        <select id="soiltype" name="soiltype">
+          <option selected>----select option----</option>
+          <option value="0">Clay</option>
+          <option value="1">Loam</option>
+          <option value="2">Sand</option>
+        </select><br>
+
+        <label for="ph">pH</label>
+        <input type="text" id="ph" name="ph" placeholder="less than 14"><br>
+
+        <label for="Organic">Organic Matter (%)</label>
+        <input type="text" id="Organic" name="Organic" placeholder=""><br>
+
+        <label for="CEC">CEC (meq/100g)</label>
+        <input type="text" id="CEC" name="CEC" placeholder=""><br>
+
+        <label for="Texture">Texture</label>
+        <select id="Texture" name="Texture">
+          <option selected>----select option----</option>
+          <option value="0">Clayey</option>
+          <option value="1">Loamy</option>
+          <option value="2">Sandy</option>
+        </select><br>
+
+        <label for="temp">Temperature (°C)</label>
+        <input type="text" id="temp" name="temp" placeholder=""><br>
+
+        <label for="Precipitation">Precipitation(mm)</label>
+        <input type="text" id="Precipitation" name="Precipitation" placeholder=""><br>
+
+
+        <label for="land">Land Use/Land Cover</label>
+        <select id="land" name="land">
+          <option selected>----select option----</option>
+          <option value="0">Agricultural</option>
+          <option value="1">Forest</option>
+          <option value="2">Grassland</option>
+        </select><br>
+
+         <label for="selectModel">Select Model</label>
+        <select id="selectModel" name="selectModel">
+          <option selected>----select option----</option>
+          <option value="0" selected>Decision Tree</option>
+          <option value="1">K Nearest Neighbour</option>
+          <option value="2">Neural Networks</option>
+          <option value="3">Random Forest</option>
+          <option value="4">Xg boost</option>
+
+        </select><br>
+
+      <input type="submit" class="my-cta-button" value="Predict">
+    </form>
+  </div>
+  <div class='footer'>
+    <p class='footer-description'>Made by Verma Ayush - 211IT079</p>
+  </div>
+
+</body>
+
+</html>
