@@ -10,3 +10,7 @@ pandas==1.2.4
 scikit-learn==1.2.2
 threadpoolctl==2.1.0
 Werkzeug==1.0.1
+Decisiontreeregressor
+RFregressor
+XgboostRegressor
+K Nearest Neighbour
