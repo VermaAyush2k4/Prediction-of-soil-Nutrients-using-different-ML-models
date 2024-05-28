@@ -19,3 +19,7 @@ User Interface design included which consists of taking features of soil from us
 Input design : files are : Output6 and Output7
 
 Results : Files are : Output1,Output2,Output3,Output4,Output5
+
+SoftwareTools: VSCode,Pycharm,and python version should be installed
+
+Requirements:refer requirements.txt
